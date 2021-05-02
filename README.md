@@ -15,7 +15,7 @@ Libraries which used in this project:
   •	Pymed
 
 Step one:
-  By using QuickUMLS we extract relevant concepts for each query string. In UMLS each concept is stored as a CUI in UMLS database. Relevant codes are represented in ----------
+  By using QuickUMLS we extract relevant concepts for each query string. In UMLS each concept is stored as a CUI in UMLS database. Relevant codes are represented in extractor.py
 Step two:
   After extracting CUIs from each query we used Pymedtermino for finding which terms are mapped to each CUI. For each CUI there is a main term and several other alternative terms.
 Step three:
