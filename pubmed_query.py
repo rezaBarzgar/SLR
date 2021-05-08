@@ -11,7 +11,7 @@ def pubmed_search(query):
     ## PUT YOUR SEARCH TERM HERE ##
     search_term = query
 
-    results = pubmed.query(search_term, max_results=5)
+    results = pubmed.query(search_term, max_results=1000)
     articleList = []
     articleInfo = []
 
@@ -26,8 +26,8 @@ def pubmed_search(query):
         # Sometimes article['pubmed_id'] contains list separated with comma - take first pubmedId in that list - thats article pubmedId
         pubmedId = article['pubmed_id'].partition('\n')[0]
         # Append article info to dictionary
-        articleInfo.append({u'pubmed_id': pubmedId,
-                            u'title': article['title']})
+        articleInfo.append({u'pubmed_id': pubmedId,})
+                            # u'title': article['title']
                             # ,u'keywords': article['keywords'],
                             # u'journal': article['journal'],
                             # u'abstract': article['abstract'],
@@ -49,4 +49,4 @@ def pubmed_search(query):
 
 
 if __name__ == '__main__':
-    pubmed_search('Patella Bone structure')
+    pubmed_search('Galactomannan detection for invasive aspergillosis in immunocompromised patients ')
